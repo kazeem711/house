@@ -15,6 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+   
     private boolean drawn;
 
     /**
@@ -35,6 +36,9 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            
+            
+            
             walls.moveHorizontal(-140);
             walls.moveVertical(20);
             walls.changeSize(120);
@@ -57,7 +61,12 @@ public class Picture
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            
+           
+            
             drawn = true;
+            
         }
     }
 
@@ -81,5 +90,13 @@ public class Picture
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
+    }
+    
+    /**
+     * 
+     */
+    public void sunset()
+    {
+       sun.slowMoveVertical(240); 
     }
 }
